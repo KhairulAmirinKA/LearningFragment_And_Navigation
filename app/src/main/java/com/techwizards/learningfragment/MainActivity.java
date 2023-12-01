@@ -1,6 +1,7 @@
 package com.techwizards.learningfragment;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.view.View;
@@ -20,18 +21,47 @@ public class MainActivity extends AppCompatActivity {
         BtnSports = findViewById(R.id.BtnSports);
         BtnScience= findViewById(R.id.BtnScience);
 
-        //onclick
+        FragmentManager fragmentManager =getSupportFragmentManager();
+
+        //onclick the news btn
         BtnNews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                fragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainerView, NewsFragment.class, null)
+                        .setReorderingAllowed(true)
+                        .addToBackStack("any Name")
+                        .commit();
+                
+
             }
         });
 
+        //onclick sports
         BtnSports.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                fragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainerView, SportsFragment.class, null)
+                        .addToBackStack("name")
+                        .setReorderingAllowed(true)
+                        .commit();
+
+            }
+        });
+
+        //onclick the Science btn
+        BtnScience.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                fragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainerView, ScienceFragment.class, null)
+                        .addToBackStack("name")
+                        .setReorderingAllowed(true)
+                        .commit();
             }
         });
        
