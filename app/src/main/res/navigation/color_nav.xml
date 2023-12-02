@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/color_nav"
+    app:startDestination="@id/nav_1stFragment">
+
+    <fragment
+        android:id="@+id/nav_1stFragment"
+        android:name="LearnNavComponent.Nav_1stFragment"
+        android:label="fragment_nav_1st"
+        tools:layout="@layout/fragment_nav_1st" >
+        <action
+            android:id="@+id/action_nav_1stFragment_to_nav_GreenFragment2"
+            app:destination="@id/nav_GreenFragment" />
+        <action
+            android:id="@+id/action_nav_1stFragment_to_nav_BlueFragment2"
+            app:destination="@id/nav_BlueFragment" />
+        <action
+            android:id="@+id/action_nav_1stFragment_to_nav_RedFragment2"
+            app:destination="@id/nav_RedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_BlueFragment"
+        android:name="LearnNavComponent.Nav_BlueFragment"
+        android:label="fragment_nav__blue"
+        tools:layout="@layout/fragment_nav__blue" />
+    <fragment
+        android:id="@+id/nav_GreenFragment"
+        android:name="LearnNavComponent.Nav_GreenFragment"
+        android:label="fragment_nav__green" />
+    <fragment
+        android:id="@+id/nav_RedFragment"
+        android:name="LearnNavComponent.Nav_RedFragment"
+        android:label="fragment_nav__red"
+        tools:layout="@layout/fragment_nav__red" />
+</navigation>

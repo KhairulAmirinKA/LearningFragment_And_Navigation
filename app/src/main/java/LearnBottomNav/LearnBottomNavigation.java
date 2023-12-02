@@ -1,4 +1,4 @@
-package LearnNavigationGraph;
+package LearnBottomNav;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -8,17 +8,17 @@ import android.os.Bundle;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.techwizards.learningfragment.R;
 
-public class LearnNavigation extends AppCompatActivity {
+public class LearnBottomNavigation extends AppCompatActivity {
 
     private BottomNavigationView bottomNavView;
     private NavController navController;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_learn_navigation);
+        setContentView(R.layout.activity_learn_bottom_navigation);
 
-        bottomNavView = findViewById(R.id.bottomNavView);
-        navController = findNav;
+//        bottomNavView = findViewById(R.id.bottomNavView);
+//        navController = findNav;
 
     }
 }
